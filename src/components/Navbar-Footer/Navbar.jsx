@@ -23,10 +23,10 @@ const Navbar = () => {
             <Link
               key={index}
               to={items.href}
-              className={`text-lg font-semibold border-2 px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
+              className={`text-lg font-semibold px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
                 location.pathname === items.href
-                  ? "text-gray-500/100 border-gray-500/100"
-                  : "text-black border-black"
+                  ? "text-gray-500/100"
+                  : "text-black"
               }`}
             >
               {items.name}

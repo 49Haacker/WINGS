@@ -56,7 +56,7 @@ const SingleHoodies = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center gap-2 w-full px-4 my-4 md:my-0">
+      <div className="flex flex-col md:flex-row items-center gap-2 w-full px-4 my-4">
         <div className="snap-x flex flex-row md:flex-col justify-start items-center overflow-y-scroll scroll-smooth snap-mandatory gap-4 my-2 sm:my-12 hide-scrollbar md:h-[33rem] w-full md:w-1/2">
           {productsImage.map((item, index) => (
             <div
@@ -82,17 +82,17 @@ const SingleHoodies = () => {
           <img
             src={selectImage ? selectImage : "/assets/page-1/DSC_6930.JPG"}
             alt=""
-            className="w-full h-[33rem] rounded-2xl"
+            className="w-full h-[33rem] rounded-2xl object-cover"
           />
         </div>
 
-        <div className="flex flex-col justify-between w-full h-[33rem] rounded-2xl bg-gray-500">
+        <div className="flex flex-col justify-between w-full h-[33rem] rounded-2xl mb-8">
           <div className="flex flex-col gap-4 px-7 pt-6">
             <h1 className="text-black font-bold text-2xl">
               Premium Black Hoodies
             </h1>
 
-            <p className="text-white/100 font-bold text-base">
+            <p className="text-black/100 font-bold text-base">
               {hoodiesSingleData.product_para}
             </p>
 
@@ -102,7 +102,7 @@ const SingleHoodies = () => {
           </div>
 
           <div className="flex flex-col px-7 pt-4">
-            <h1 className="text-white/100 font-bold text-2xl">
+            <h1 className="text-black/100 font-bold text-2xl">
               Rate this Project
             </h1>
 
@@ -133,7 +133,7 @@ const SingleHoodies = () => {
             </button>
 
             <button className="hover:scale-110 bg-black hover:bg-black/80 text-white font-bold text-lg p-2 rounded-lg w-full">
-              Add to Cart
+              Buy now
             </button>
           </div>
         </div>

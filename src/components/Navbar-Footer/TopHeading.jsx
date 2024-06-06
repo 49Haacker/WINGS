@@ -13,7 +13,7 @@ const TopHeading = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="flex items-center justify-between md:justify-center bg-[#16ec8e] p-2">
+        <div className="flex items-center justify-between md:justify-center bg-[#40e4ed] p-2">
           {/* <h1 className="text-2xl text-center font-semibold font-[Bungee]">
             WINGS FASHON
           </h1> */}
@@ -33,7 +33,7 @@ const TopHeading = () => {
           </div>
         </div>
 
-        <div className="w-full h-1 bg-black"></div>
+        <div className="w-full h-2 bg-black"></div>
       </div>
 
       {isSideNavOpen && <SideNavbar toggleSideNav={toggleSideNav} />}
