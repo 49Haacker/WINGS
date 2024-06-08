@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
@@ -7,8 +7,8 @@ import { ToastContainer, toast } from "react-toastify";
 const HoodiesCart = () => {
   const [storeCartData, setStoreCartData] = useState([]);
   const { cartItems } = useHoodiesCart();
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleDropdown = () => setIsOpen(!isOpen);
+  const [isOpenDropdowns, setIsOpenDropdowns] = useState(false);
+  const dropdownRef = useRef(null);
 
   // Load cart data from localStorage when the component mounts
   useEffect(() => {
@@ -52,7 +52,25 @@ const HoodiesCart = () => {
     toast("Add to wishlist successfully!");
   };
 
-  //   console.log(storeCartData);
+  const toggleDropdown = (id) => {
+    setIsOpenDropdowns((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpenDropdowns({});
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -70,7 +88,10 @@ const HoodiesCart = () => {
               className="flex flex-col w-full shadow-xl rounded-xl my-2"
             >
               <div className="flex flex-col md:flex-row gap-4 py-3 px-4 w-full">
-                <div className="flex flex-col gap-2 w-full md:w-1/3">
+                <div
+                  ref={dropdownRef}
+                  className="flex flex-col gap-2 w-full md:w-1/3"
+                >
                   <img
                     src={items.image}
                     alt={items.alt}
@@ -80,7 +101,7 @@ const HoodiesCart = () => {
                   <div className="relative inline-block text-left">
                     <div>
                       <button
-                        onClick={toggleDropdown}
+                        onClick={() => toggleDropdown(items.id)}
                         type="button"
                         className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
                         id="menu-button"
@@ -92,7 +113,7 @@ const HoodiesCart = () => {
                       </button>
                     </div>
 
-                    {isOpen && (
+                    {isOpenDropdowns[items.id] && (
                       <div
                         className="origin-top-right absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none opacity-100 z-50"
                         role="menu"
