@@ -13,12 +13,12 @@ const CarouselSection = () => {
       alt: "wings-home-2",
     },
     {
-      url: "/assets/page-1/WINGS-Home-image-1.png",
-      alt: "wings-home-1",
+      url: "/assets/page-1/WINGS-Home-image-3.png",
+      alt: "wings-home-3",
     },
     {
-      url: "/assets/page-1/WINGS-Home-image-2.png",
-      alt: "wings-home-2",
+      url: "/assets/page-1/WINGS-Home-image-4.png",
+      alt: "wings-home-4",
     },
   ];
 
@@ -69,7 +69,7 @@ const CarouselSection = () => {
   //   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
+    const interval = setInterval(nextSlide, 30055550);
 
     return () => {
       clearInterval(interval);
@@ -81,7 +81,7 @@ const CarouselSection = () => {
       <div className="flex flex-col items-center justify-center w-full bg-yellow-300">
         <div className="relative w-full ">
           {/* Carousel wrapper */}
-          <div className="relative h-[33rem] overflow-hidden rounded-lg">
+          <div className="relative w-full h-[35rem] overflow-hidden rounded-lg">
             {/* Carousel items */}
             {carouselItems.map((item, index) => (
               <div
@@ -98,6 +98,11 @@ const CarouselSection = () => {
                   className="block w-full h-full object-cover"
                   alt={item.alt}
                 />
+                {/* <img
+                  src={item.url}
+                  className="block w-full h-full object-cover"
+                  alt={item.alt}
+                /> */}
               </div>
             ))}
           </div>
