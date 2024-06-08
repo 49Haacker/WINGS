@@ -3,6 +3,7 @@ import "../../App.css";
 import Navbar from "../Navbar-Footer/Navbar";
 import Footer from "../Navbar-Footer/Footer";
 import TopHeading from "../Navbar-Footer/TopHeading";
+import { HoodiesCartProvider } from "../../hooks/HoodiesCartContext";
 
 const HomeLayout = () => {
   return (
@@ -13,7 +14,9 @@ const HomeLayout = () => {
         <Navbar />
 
         {/* <div className="h-screen"> */}
-        <Outlet />
+        <HoodiesCartProvider>
+          <Outlet />
+        </HoodiesCartProvider>
         {/* </div> */}
 
         <Footer />

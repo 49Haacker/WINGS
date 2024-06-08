@@ -34,9 +34,9 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex pr-4">
+        <Link to={"/hoodies-cart"} className="hidden md:flex pr-4">
           <TiShoppingCart className="text-4xl text-black cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300" />
-        </div>
+        </Link>
       </nav>
     </>
   );

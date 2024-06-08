@@ -5,6 +5,7 @@ import HomeLayout from "../components/Home/HomeLayout";
 import {
   Home,
   Hoodies,
+  HoodiesCart,
   Polos,
   RoundedNeckTshirts,
   SingleHoodies,
@@ -30,7 +31,9 @@ const router = () => {
           <Route path="/zippers" element={<Zipper />} />
           <Route path="/rounded-Tshirts" element={<RoundedNeckTshirts />} />
           <Route path="/Polos" element={<Polos />} />
+
           <Route path="/single-hoodies" element={<SingleHoodies />} />
+          <Route path="/hoodies-cart" element={<HoodiesCart />} />
         </Route>
       </Routes>
     </>

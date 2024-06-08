@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FaRegStar, FaStar } from "react-icons/fa";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
 
 const SingleHoodies = () => {
   const [selectImage, setSelectImage] = useState();
   const [rating, setRating] = useState(0);
+
+  const { addToCart } = useHoodiesCart();
 
   const location = useLocation();
   const { hoodiesSingleData } = location.state;
@@ -52,6 +57,9 @@ const SingleHoodies = () => {
     // console.log("start click value was ", value);
   };
 
+  const handleAddtoCart = (cartData) => {
+    addToCart(cartData);
+  };
   //   console.log(hoodiesSingleData);
 
   return (
@@ -85,6 +93,8 @@ const SingleHoodies = () => {
             className="w-full h-[33rem] rounded-2xl object-cover"
           />
         </div>
+
+        <ToastContainer />
 
         <div className="flex flex-col justify-between w-full h-[33rem] rounded-2xl mb-8">
           <div className="flex flex-col gap-4 px-7 pt-6">
@@ -128,7 +138,10 @@ const SingleHoodies = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-2 w-full px-7 py-4">
-            <button className="hover:scale-110 bg-green-800 hover:bg-green-600 text-white font-bold text-lg p-2 rounded-lg w-full">
+            <button
+              className="hover:scale-110 bg-green-800 hover:bg-green-600 text-white font-bold text-lg p-2 rounded-lg w-full"
+              onClick={() => handleAddtoCart(hoodiesSingleData)}
+            >
               Add to Cart
             </button>
 
