@@ -4,14 +4,17 @@ import Navbar from "../Navbar-Footer/Navbar";
 import Footer from "../Navbar-Footer/Footer";
 import TopHeading from "../Navbar-Footer/TopHeading";
 import { HoodiesCartProvider } from "../../hooks/HoodiesCartContext";
+import { useRef } from "react";
 
 const HomeLayout = () => {
+  const footerRef = useRef(null);
+
   return (
     <>
       <div className="flex flex-col flex-1 h-screen">
         <TopHeading />
 
-        <Navbar />
+        <Navbar footerRef={footerRef} />
 
         {/* <div className="h-screen"> */}
         <HoodiesCartProvider>
@@ -19,7 +22,7 @@ const HomeLayout = () => {
         </HoodiesCartProvider>
         {/* </div> */}
 
-        <Footer />
+        <Footer ref={footerRef} />
       </div>
     </>
   );

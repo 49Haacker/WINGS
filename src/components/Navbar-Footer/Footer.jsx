@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMarkEmailUnread, MdOutlinePhone } from "react-icons/md";
 
@@ -46,10 +48,10 @@ const footerHeading = [
   },
 ];
 
-const Footer = () => {
+const Footer = React.forwardRef((props, ref) => {
   return (
     <>
-      <div className="relative w-full">
+      <div ref={ref} className="relative w-full">
         <div className="flex flex-col sm:flex-row">
           <img
             src="/assets/page-3/DSC_6971-copy.JPG"
@@ -121,6 +123,15 @@ const Footer = () => {
       </div>
     </>
   );
+});
+
+Footer.propTypes = {
+  ref: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
+
+Footer.displayName = "Footer";
 
 export default Footer;

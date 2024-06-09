@@ -1,16 +1,25 @@
+import PropTypes from "prop-types";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "HOME", href: "/" },
-  { name: "POLO", href: "/polos" },
-  { name: "HOODIES", href: "/hoodies" },
-  { name: "ZIPPERS", href: "/zippers" },
-  { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
+  { name: "SHOP", href: "/shop" },
+  { name: "CONTACT-US", href: "#" },
+  // { name: "ZIPPERS", href: "/zippers" },
+  // { name: "Oversized", href: "/oversized" },
+  // { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ footerRef }) => {
   const location = useLocation();
+
+  const handleContactUsClick = (e) => {
+    e.preventDefault();
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -23,6 +32,9 @@ const Navbar = () => {
             <Link
               key={index}
               to={items.href}
+              onClick={
+                items.name === "CONTACT-US" ? handleContactUsClick : null
+              }
               className={`text-lg font-semibold px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
                 location.pathname === items.href
                   ? "text-gray-500/100"
@@ -40,6 +52,10 @@ const Navbar = () => {
       </nav>
     </>
   );
+};
+
+Navbar.propTypes = {
+  footerRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 export default Navbar;

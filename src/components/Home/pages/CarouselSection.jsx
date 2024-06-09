@@ -12,10 +12,7 @@ const CarouselSection = () => {
       url: "/assets/page-1/WINGS-Home-image-2.png",
       alt: "wings-home-2",
     },
-    {
-      url: "/assets/page-1/WINGS-Home-image-3.png",
-      alt: "wings-home-3",
-    },
+
     {
       url: "/assets/page-1/WINGS-Home-image-4.png",
       alt: "wings-home-4",
@@ -24,34 +21,34 @@ const CarouselSection = () => {
 
   const productsImage = [
     {
-      imageurl: "/assets/page-1/DSC_6930.JPG",
+      imageurl: "/assets/page-1/product-1-1.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Hoodies",
-      herf: "/hoodies",
+      herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/DSC_6963.JPG",
+      imageurl: "/assets/page-1/product-2-1.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Zipper",
-      herf: "/zippers",
+      herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/DSC_6972.JPG",
+      imageurl: "/assets/page-1/product-2-1.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Rounded Neck T-shirt",
-      herf: "/rounded-Tshirts",
+      herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/DSC_7028.JPG",
+      imageurl: "/assets/page-1/product-3-1.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Rounded Neck T-shirt",
-      herf: "/rounded-Tshirts",
+      herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/DSC_7062.jpg",
+      imageurl: "/assets/page-1/product-4-1.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Polos",
-      herf: "/polos",
+      herf: "/shop",
     },
   ];
 
@@ -69,7 +66,7 @@ const CarouselSection = () => {
   //   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 30055550);
+    const interval = setInterval(nextSlide, 3000);
 
     return () => {
       clearInterval(interval);
@@ -98,9 +95,10 @@ const CarouselSection = () => {
                   className="block w-full h-full object-cover"
                   alt={item.alt}
                 />
+
                 {/* <img
                   src={item.url}
-                  className="block w-full h-full object-cover"
+                  className="block w-1/2 h-full object-"
                   alt={item.alt}
                 /> */}
               </div>

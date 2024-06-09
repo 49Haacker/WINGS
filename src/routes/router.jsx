@@ -4,12 +4,9 @@ import { Sign_In, Sign_Up } from "../_auth/pages";
 import HomeLayout from "../components/Home/HomeLayout";
 import {
   Home,
-  Hoodies,
   HoodiesCart,
-  Polos,
-  RoundedNeckTshirts,
+  Shop,
   SingleHoodies,
-  Zipper,
 } from "../components/Home/pages";
 
 const router = () => {
@@ -27,10 +24,11 @@ const router = () => {
         {/* private routes */}
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<Home />} />
-          <Route path="/hoodies" element={<Hoodies />} />
-          <Route path="/zippers" element={<Zipper />} />
+          <Route path="/shop" element={<Shop />} />
+          {/* <Route path="/zippers" element={<Zipper />} />
+          <Route path="/oversized" element={<OverSizeTShirt />} />
           <Route path="/rounded-Tshirts" element={<RoundedNeckTshirts />} />
-          <Route path="/Polos" element={<Polos />} />
+          <Route path="/Polos" element={<Polos />} /> */}
 
           <Route path="/single-hoodies" element={<SingleHoodies />} />
           <Route path="/hoodies-cart" element={<HoodiesCart />} />

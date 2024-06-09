@@ -72,6 +72,8 @@ const HoodiesCart = () => {
     };
   }, []);
 
+  // console.log(storeCartData);
+
   return (
     <>
       <div className="flex flex-col py-8 px-4">
@@ -93,7 +95,7 @@ const HoodiesCart = () => {
                   className="flex flex-col gap-2 w-full md:w-1/3"
                 >
                   <img
-                    src={items.image}
+                    src={items.images[0]}
                     alt={items.alt}
                     className="h-[20rem] md:h-[15rem] w-full object-cover hover:scale-105 rounded-lg cursor-pointer"
                   />
@@ -142,20 +144,21 @@ const HoodiesCart = () => {
 
                 <div className="flex flex-col items-start w-full">
                   <h1 className="text-xl font-semibold text-black">
-                    Dark Gray Solid Custom Twill Shirt form Men
+                    {items.product_head}
                   </h1>
                   <span className="text-base font-semibold text-slate-500">
-                    urben shirt
+                    {items.product_para}
                   </span>
 
                   <div className="flex flex-col my-4">
                     <span className="flex items-center text-base font-semibold text-black">
                       <MdOutlineCurrencyRupee />
-                      1399
-                      <span className="flex items-center text-slate-500 pl-2">
+                      {items.product_new_price}
+                      <span className="flex items-center text-red-600 text line-through pl-2">
                         <MdOutlineCurrencyRupee />
-                        2999 <span className="text-green-500">(53% Off)</span>
+                        {items.product_old_price}
                       </span>
+                      <span className="text-green-500 pl-2">(53% Off)</span>
                     </span>
 
                     <span className="flex items-center text-base font-semibold text-black">
