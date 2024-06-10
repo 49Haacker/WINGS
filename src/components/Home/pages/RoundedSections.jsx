@@ -12,12 +12,12 @@ const RoundedSections = () => {
         >
           <div className="flex flex-col sm:flex-row gap-2">
             <img
-              src="/assets/page-3/DSC_6971-copy.JPG"
+              src="/assets/page-3/DSC_6971-copy.jpeg"
               alt="DSC_7062.JPG"
               className="w-full sm:w-1/2 h-[33rem] object-cover"
             />
             <img
-              src="/assets/page-3/DSC_6963.JPG"
+              src="/assets/page-3/DSC_6963.jpeg"
               alt="DSC_7062.JPG"
               className="w-full sm:w-1/2 h-[33rem] object-cover"
             />
@@ -41,12 +41,12 @@ const RoundedSections = () => {
         >
           <div className="flex flex-col sm:flex-row gap-2">
             <img
-              src="/assets/page-3/DSC_7028.JPG"
+              src="/assets/page-3/DSC_7028.jpeg"
               alt="DSC_7062.JPG"
               className="w-full sm:w-1/2 h-[33rem] object-cover"
             />
             <img
-              src="/assets/page-3/DSC_7029.JPG"
+              src="/assets/page-3/DSC_7029.jpeg"
               alt="DSC_7062.JPG"
               className="w-full sm:w-1/2 h-[33rem] object-cover"
             />

@@ -54,12 +54,12 @@ const Footer = React.forwardRef((props, ref) => {
       <div ref={ref} className="relative w-full">
         <div className="flex flex-col sm:flex-row">
           <img
-            src="/assets/page-3/DSC_6971-copy.JPG"
+            src="/assets/page-3/DSC_6971-copy.jpeg"
             alt="DSC_7062.JPG"
             className="w-full sm:w-1/2 h-[25rem] object-cover"
           />
           <img
-            src="/assets/page-3/DSC_6963.JPG"
+            src="/assets/page-3/DSC_6963.jpeg"
             alt="DSC_7062.JPG"
             className="w-full sm:w-1/2 h-[25rem] object-cover"
           />

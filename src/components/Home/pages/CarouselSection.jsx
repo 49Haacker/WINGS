@@ -27,27 +27,27 @@ const CarouselSection = () => {
       herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/product-2-1.jpeg",
+      imageurl: "/assets/page-1/product-9-2.jpeg",
       altText: "DSC_6963.JPG",
       productName: "Zipper",
       herf: "/shop",
     },
     {
-      imageurl: "/assets/page-1/product-2-1.jpeg",
+      imageurl: "/assets/page-1/product-6-2.jpeg",
       altText: "DSC_6963.JPG",
-      productName: "Rounded Neck T-shirt",
+      productName: "Round Neck Tees",
       herf: "/shop",
     },
     {
       imageurl: "/assets/page-1/product-3-1.jpeg",
       altText: "DSC_6963.JPG",
-      productName: "Rounded Neck T-shirt",
+      productName: "White Polo Tees",
       herf: "/shop",
     },
     {
       imageurl: "/assets/page-1/product-4-1.jpeg",
       altText: "DSC_6963.JPG",
-      productName: "Polos",
+      productName: "Round Neck Tees",
       herf: "/shop",
     },
   ];

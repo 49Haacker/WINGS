@@ -4,7 +4,7 @@ const AboutusSection = () => {
       <div className="flex flex-col w-full">
         <div className="flex flex-col justify-center items-center min-h-screen w-full relative">
           <img
-            src="/assets/page-4/about-image.png"
+            src="/assets/page-4/about-image.jpeg"
             alt="about-image"
             className="object-cover w-full h-full absolute"
           />

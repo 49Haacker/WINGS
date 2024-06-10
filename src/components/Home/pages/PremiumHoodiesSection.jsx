@@ -11,7 +11,7 @@ const PremiumHoodiesSection = () => {
           onClick={() => navigate("/shop")}
         >
           <img
-            src="/assets/page-2/DSC_7062.JPG"
+            src="/assets/page-2/DSC_7062.jpeg"
             alt="DSC_7062.JPG"
             className="w-full h-[33rem] object-cover"
           />
@@ -34,7 +34,7 @@ const PremiumHoodiesSection = () => {
         >
           <div className="w-full sm:w-1/2">
             <img
-              src="/assets/page-2/page-2-left.png"
+              src="/assets/page-2/page-2-left.jpeg"
               alt="DSC_7062.JPG"
               className="w-full h-[15rem]"
             />
@@ -42,7 +42,7 @@ const PremiumHoodiesSection = () => {
 
           <div className="w-full sm:w-1/2">
             <img
-              src="/assets/page-2/page-2-right.png"
+              src="/assets/page-2/page-2-right.jpeg"
               alt="DSC_7062.JPG"
               className="w-full h-[15rem] object-cover"
             />
