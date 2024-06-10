@@ -33,7 +33,7 @@ const SideNavbar = ({ toggleSideNav }) => {
             </Link>
           ))}
 
-          <Link to={"/hoodies-cart"} className="pt-4">
+          <Link to={"/hoodies-cart"} className="pt-4" onClick={toggleSideNav}>
             <TiShoppingCart className="text-4xl cursor-pointer" />
           </Link>
         </div>
