@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 const RoundedSections = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-2 w-full mb-8">
-        <div className="relative w-full">
+        <div
+          className="relative w-full cursor-pointer"
+          onClick={() => navigate("/shop")}
+        >
           <div className="flex flex-col sm:flex-row gap-2">
             <img
               src="/assets/page-3/DSC_6971-copy.JPG"
@@ -28,7 +35,10 @@ const RoundedSections = () => {
           </div>
         </div>
 
-        <div className="relative w-full">
+        <div
+          className="relative w-full cursor-pointer"
+          onClick={() => navigate("/shop")}
+        >
           <div className="flex flex-col sm:flex-row gap-2">
             <img
               src="/assets/page-3/DSC_7028.JPG"

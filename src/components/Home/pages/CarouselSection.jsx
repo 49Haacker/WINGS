@@ -176,7 +176,7 @@ const CarouselSection = () => {
             <Link
               key={index}
               to={item.herf}
-              className="snap-center flex-shrink-0 relative cursor-pointer w-[80%] sm:w-[60%] md:w-[30%] lg:w-[15%] h-[24rem] sm:h-[20rem]"
+              className="snap-center flex-shrink-0 relative cursor-pointer w-[15rem] h-[24rem] sm:h-[20rem]"
             >
               <img
                 className="w-full h-full rounded-3xl"

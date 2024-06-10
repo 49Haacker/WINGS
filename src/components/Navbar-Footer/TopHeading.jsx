@@ -19,9 +19,9 @@ const TopHeading = () => {
           </h1> */}
           <Link to={"/"} className="w-full contents">
             <img
-              src="/assets/page-1/WINGS-Top-Text.png"
+              src="/assets/logo.png"
               alt="WINGS-Top-Text"
-              className="w-1/2 md:w-1/4 object-fill"
+              className="w-[8rem] h-[5rem] object-fill"
             />
           </Link>
 

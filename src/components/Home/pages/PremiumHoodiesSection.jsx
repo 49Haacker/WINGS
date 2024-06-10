@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 const PremiumHoodiesSection = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex flex-col items-center justify-center gap-2 w-full">
-        <div className="relative w-full">
+        <div
+          className="relative w-full cursor-pointer"
+          onClick={() => navigate("/shop")}
+        >
           <img
             src="/assets/page-2/DSC_7062.JPG"
             alt="DSC_7062.JPG"
@@ -21,7 +28,10 @@ const PremiumHoodiesSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-2 w-full h-full">
+        <div
+          className="flex flex-col sm:flex-row gap-2 w-full h-full cursor-pointer"
+          onClick={() => navigate("/shop")}
+        >
           <div className="w-full sm:w-1/2">
             <img
               src="/assets/page-2/page-2-left.png"

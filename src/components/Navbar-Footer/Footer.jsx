@@ -67,7 +67,7 @@ const Footer = React.forwardRef((props, ref) => {
 
         <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
           <span className="text-green-500 text-center text-3xl sm:text-4xl md:text-5xl lg:text-[8em] font-bold font-sans tracking-tighter">
-            Get More Atteractive Offers
+            Get More Attractive Offers
           </span>
         </div>
       </div>
