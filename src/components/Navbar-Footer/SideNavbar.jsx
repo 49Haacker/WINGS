@@ -33,9 +33,9 @@ const SideNavbar = ({ toggleSideNav }) => {
             </Link>
           ))}
 
-          <div className="pt-4">
+          <Link to={"/hoodies-cart"} className="pt-4">
             <TiShoppingCart className="text-4xl cursor-pointer" />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
