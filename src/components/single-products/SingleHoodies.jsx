@@ -130,8 +130,8 @@ const SingleHoodies = () => {
               Size : {selectedSize}
             </h1>
 
-            <div className="flex mt-5 gap-4">
-              {["S", "M", "L", "XL", "XXL", "XXXL"].map((size) => (
+            <div className="flex mt-5 gap-4 overflow-x-scroll hide-scrollbar">
+              {["S", "M", "L", "XL", "XXL"].map((size) => (
                 <div
                   key={size}
                   className={`border rounded-lg py-1 px-4 cursor-pointer ${
