@@ -131,7 +131,7 @@ const SingleHoodies = () => {
             </h1>
 
             <div className="flex mt-5 gap-4">
-              {["S", "M", "L", "XL", "XXL"].map((size) => (
+              {["S", "M", "L", "XL", "XXL", "XXXL"].map((size) => (
                 <div
                   key={size}
                   className={`border rounded-lg py-1 px-4 cursor-pointer ${
