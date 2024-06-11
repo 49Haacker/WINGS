@@ -194,7 +194,8 @@ const HoodiesCart = () => {
                       </span>
 
                       <span className="text-base font-semibold text-slate-500">
-                        Size: <span className="text-black">L</span>
+                        Size:{" "}
+                        <span className="text-black">{items.selectedSize}</span>
                       </span>
                     </div>
                   </div>

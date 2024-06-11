@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
@@ -8,11 +8,16 @@ import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
 const SingleHoodies = () => {
   const [selectImage, setSelectImage] = useState();
   const [rating, setRating] = useState(0);
+  const [selectedSize, setSelectedSize] = useState("S");
 
   const { addToCart } = useHoodiesCart();
 
   const location = useLocation();
   const { hoodiesSingleData } = location.state;
+
+  useEffect(() => {
+    setSelectedSize("S"); // Ensure default size "S" is selected on component mount
+  }, []);
 
   const handleClickImage = (currentImage) => {
     // console.log(currentImage);
@@ -25,7 +30,13 @@ const SingleHoodies = () => {
   };
 
   const handleAddtoCart = (cartData) => {
-    addToCart(cartData);
+    const cartDataWithSize = { ...cartData, selectedSize };
+    // console.log(cartDataWithSize);
+    addToCart(cartDataWithSize);
+  };
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
   };
 
   // console.log(hoodiesSingleData);
@@ -43,7 +54,7 @@ const SingleHoodies = () => {
               <img
                 className="w-full h-full rounded-3xl"
                 src={item}
-                alt={item.alt}
+                alt="{item.alt}"
                 onClick={() => handleClickImage(item)}
               />
               {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-3xl flex justify-center items-end pb-4">
@@ -112,6 +123,28 @@ const SingleHoodies = () => {
             </div>
           </div>
           {/* rating code end here */}
+
+          <div className="flex flex-col px-7 pt-4">
+            <h1 className="text-black/100 font-bold text-2xl">
+              Size : {selectedSize}
+            </h1>
+
+            <div className="flex mt-5 gap-4">
+              {["S", "M", "L", "XL"].map((size) => (
+                <div
+                  key={size}
+                  className={`border rounded-lg py-1 px-4 cursor-pointer ${
+                    selectedSize === size
+                      ? "bg-black text-white"
+                      : "border-black"
+                  }`}
+                  onClick={() => handleSizeClick(size)}
+                >
+                  {size}
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* button code start here */}
           <div className="flex flex-col sm:flex-row gap-2 w-full px-7 py-4">
