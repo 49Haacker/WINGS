@@ -79,7 +79,7 @@ const HoodiesCart = () => {
     };
   };
 
-  console.log(storeCartData);
+  // console.log(storeCartData);
 
   return (
     <>
