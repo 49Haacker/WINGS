@@ -6,11 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 
 const HoodiesCart = () => {
   const [storeCartData, setStoreCartData] = useState([]);
-  const { cartItems } = useHoodiesCart();
+  // const { cartItems } = useHoodiesCart();
+  const { cartItems, removeFromCart } = useHoodiesCart();
+
   // const [isOpenDropdowns, setIsOpenDropdowns] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Load cart data from localStorage when the component mounts
   useEffect(() => {
     const savedCartData = localStorage.getItem("storeCartData");
     if (savedCartData) {
@@ -18,30 +19,27 @@ const HoodiesCart = () => {
     }
   }, []);
 
-  // Update storeCartData when cartItems changes
   useEffect(() => {
     if (cartItems.length > 0) {
       setStoreCartData((prevData) => {
         const newItems = cartItems.filter(
           (item) => !prevData.some((prevItem) => prevItem.id === item.id)
         );
-        return [...prevData, ...newItems];
+        const updatedData = [...prevData, ...newItems];
+        localStorage.setItem("storeCartData", JSON.stringify(updatedData));
+        return updatedData;
       });
     }
   }, [cartItems]);
 
-  // Save cart data to localStorage whenever it changes
   useEffect(() => {
-    if (storeCartData.length > 0) {
-      localStorage.setItem("storeCartData", JSON.stringify(storeCartData));
-    }
+    localStorage.setItem("storeCartData", JSON.stringify(storeCartData));
   }, [storeCartData]);
 
   const handleRemove = (id) => {
     const updatedCartData = storeCartData.filter((item) => item.id !== id);
-    // console.log(updatedCartData);
-
     setStoreCartData(updatedCartData);
+    removeFromCart(id); // Update context state as well
     localStorage.setItem("storeCartData", JSON.stringify(updatedCartData));
     toast("Removed from cart successfully!");
   };
@@ -81,7 +79,7 @@ const HoodiesCart = () => {
     };
   };
 
-  // console.log(storeCartData);
+  console.log(storeCartData);
 
   return (
     <>

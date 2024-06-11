@@ -15,8 +15,14 @@ export const HoodiesCartProvider = ({ children }) => {
     toast("Added to cart!");
   };
 
+  const removeFromCart = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
   return (
-    <HoodiesCartContext.Provider value={{ cartItems, addToCart }}>
+    <HoodiesCartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart }}
+    >
       {children}
     </HoodiesCartContext.Provider>
   );

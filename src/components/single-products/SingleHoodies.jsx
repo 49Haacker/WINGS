@@ -4,6 +4,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
+import { v4 as uuidv4 } from "uuid";
 
 const SingleHoodies = () => {
   const [selectImage, setSelectImage] = useState();
@@ -30,9 +31,9 @@ const SingleHoodies = () => {
   };
 
   const handleAddtoCart = (cartData) => {
-    const cartDataWithSize = { ...cartData, selectedSize };
-    // console.log(cartDataWithSize);
+    const cartDataWithSize = { ...cartData, selectedSize, id: uuidv4() };
     addToCart(cartDataWithSize);
+    // console.log(cartDataWithSize);
   };
 
   const handleSizeClick = (size) => {
