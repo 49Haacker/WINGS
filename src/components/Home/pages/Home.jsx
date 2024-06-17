@@ -9,7 +9,7 @@ const Home = () => {
       {/* <div className="flex flex-col h-screen"> */}
       <CarouselSection />
 
-      <div className="flex flex-col gap-2 bg-[#444444a3]">
+      <div className="flex flex-col gap-2 bg-[#ffffff]">
         <PremiumHoodiesSection />
         <RoundedSections />
       </div>

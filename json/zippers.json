@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "images": [
+      "/assets/page-1/product-9-1.jpeg",
+      "/assets/page-1/product-9-2.jpeg",
+      "/assets/page-1/product-9-3.jpeg",
+      "/assets/page-1/product-9-4.jpeg",
+      "/assets/page-1/product-9-5.jpeg",
+      "/assets/page-1/product-1(2)(9)-6.jpeg"
+    ],
+    "alt": "zippers",
+    "product_head": "Black Zippers",
+    "product_para": "Black Zippers for mens.",
+    "product_old_price": "1999",
+    "product_new_price": "999"
+  }
+]

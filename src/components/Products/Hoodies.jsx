@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import hoodies from "../../../json/hoodies.json";
 
-const Shop = () => {
+const Hoodies = () => {
   const navigate = useNavigate();
 
   const handleUserClick = (hoodies) => {
@@ -60,4 +60,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default Hoodies;

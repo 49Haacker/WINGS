@@ -16,11 +16,11 @@ const HomeLayout = () => {
 
         <Navbar footerRef={footerRef} />
 
-        {/* <div className="h-screen"> */}
-        <HoodiesCartProvider>
-          <Outlet />
-        </HoodiesCartProvider>
-        {/* </div> */}
+        <div className="flex-1">
+          <HoodiesCartProvider>
+            <Outlet />
+          </HoodiesCartProvider>
+        </div>
 
         <Footer ref={footerRef} />
       </div>

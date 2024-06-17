@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "HOME", href: "/" },
-  { name: "SHOP", href: "/shop" },
+  { name: "POLO", href: "/polo" },
+  { name: "HOODIES", href: "/hoodies" },
+  { name: "ZIPPERS", href: "/zippers" },
+  { name: "Oversized", href: "/oversized" },
+  { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
   { name: "CONTACT-US", href: "#" },
-  // { name: "HOODIES", href: "/hoodies" },
-  // { name: "ZIPPERS", href: "/zippers" },
-  // { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
 ];
 
 const SideNavbar = ({ toggleSideNav }) => {

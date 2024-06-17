@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import "../../../App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import InifiteScroller from "./InifiteScroller";
 
 const CarouselSection = () => {
   const carouselItems = [
@@ -19,64 +18,32 @@ const CarouselSection = () => {
     },
   ];
 
-  const productsImage = [
-    {
-      imageurl: "/assets/page-1/product-1-1.jpeg",
-      altText: "DSC_6963.JPG",
-      productName: "Hoodies",
-      herf: "/shop",
-    },
-    {
-      imageurl: "/assets/page-1/product-9-2.jpeg",
-      altText: "DSC_6963.JPG",
-      productName: "Zipper",
-      herf: "/shop",
-    },
-    {
-      imageurl: "/assets/page-1/product-6-2.jpeg",
-      altText: "DSC_6963.JPG",
-      productName: "Round Neck Tees",
-      herf: "/shop",
-    },
-    {
-      imageurl: "/assets/page-1/product-3-1.jpeg",
-      altText: "DSC_6963.JPG",
-      productName: "White Polo Tees",
-      herf: "/shop",
-    },
-    {
-      imageurl: "/assets/page-1/product-4-1.jpeg",
-      altText: "DSC_6963.JPG",
-      productName: "Round Neck Tees",
-      herf: "/shop",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselItems.length);
   };
 
-  //   const prevSlide = () => {
-  //     setCurrentIndex(
-  //       (prevIndex) =>
-  //         (prevIndex - 1 + carouselItems.length) % carouselItems.length
-  //     );
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + carouselItems.length) % carouselItems.length
+    );
+  };
+
+  // auto scroll
+  // useEffect(() => {
+  //   const interval = setInterval(nextSlide, 3000);
+
+  //   return () => {
+  //     clearInterval(interval);
   //   };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  // }, []);
 
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full bg-yellow-300">
-        <div className="relative w-full ">
+        <div className="relative w-full mb-8">
           {/* Carousel wrapper */}
           <div className="relative w-full h-[35rem] overflow-hidden rounded-lg">
             {/* Carousel items */}
@@ -121,76 +88,57 @@ const CarouselSection = () => {
           </div>
 
           {/* Slider controls */}
-          {/* <button
-          type="button"
-          className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          onClick={prevSlide}
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          onClick={nextSlide}
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-800"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </span>
-        </button> */}
+          <button
+            type="button"
+            className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            onClick={prevSlide}
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            onClick={nextSlide}
+          >
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
         </div>
 
-        <div className="snap-x flex justify-center items-center overflow-x-scroll scroll-smooth snap-mandatory gap-4 w-full my-12 hide-scrollbar">
-          {productsImage.map((item, index) => (
-            <Link
-              key={index}
-              to={item.herf}
-              className="snap-center flex-shrink-0 relative cursor-pointer w-[15rem] h-[24rem] sm:h-[20rem]"
-            >
-              <img
-                className="w-full h-full rounded-3xl"
-                src={item.imageurl}
-                alt={item.altText}
-              />
-              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-3xl flex justify-center items-end pb-4">
-                <span className="text-white text-center">
-                  {item.productName}
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <InifiteScroller />
       </div>
     </>
   );

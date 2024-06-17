@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "images": [
+      "/assets/page-1/product-7-1.jpeg",
+      "/assets/page-1/product-7-2.jpeg",
+      "/assets/page-1/product-7-3.jpeg",
+      "/assets/page-1/product-7-4.jpeg",
+      "/assets/page-1/product-7-5.jpeg",
+      "/assets/page-1/product-4-6.jpeg"
+    ],
+    "alt": "Honorable",
+    "product_head": "Oversized Tshirt",
+    "product_para": "Oversized Tshirt.",
+    "product_old_price": "999",
+    "product_new_price": "499"
+  }
+]

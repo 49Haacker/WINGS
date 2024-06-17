@@ -51,7 +51,7 @@ const footerHeading = [
 const Footer = React.forwardRef((props, ref) => {
   return (
     <>
-      <div ref={ref} className="relative w-full">
+      {/* <div ref={ref} className="relative w-full">
         <div className="flex flex-col sm:flex-row">
           <img
             src="/assets/page-3/DSC_6971-copy.jpeg"
@@ -70,9 +70,9 @@ const Footer = React.forwardRef((props, ref) => {
             Get More Attractive Offers
           </span>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col bg-black">
+      <div ref={ref} className="flex flex-col bg-black">
         <div className="flex flex-wrap gap-6 sm:gap-8 md:gap-12 lg:gap-24 text-white my-6">
           {footerHeading.map((items, index) => (
             <div className="flex flex-col gap-4 pl-2" key={index}>

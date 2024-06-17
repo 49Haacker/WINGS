@@ -5,6 +5,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
 import { v4 as uuidv4 } from "uuid";
+import HoodiesModels from "../models/Hoodies.models";
+import BuyModels from "../models/Buy.models";
 
 const SingleHoodies = () => {
   const [selectImage, setSelectImage] = useState();
@@ -126,9 +128,13 @@ const SingleHoodies = () => {
           {/* rating code end here */}
 
           <div className="flex flex-col px-7 pt-4">
-            <h1 className="text-black/100 font-bold text-2xl">
-              Size : {selectedSize}
-            </h1>
+            <span className="flex justify-between items-center">
+              <span className="text-black/100 font-bold text-2xl">
+                Size : {selectedSize}
+              </span>
+
+              <HoodiesModels chartImage={hoodiesSingleData.images} />
+            </span>
 
             <div className="flex mt-5 gap-4 overflow-x-scroll hide-scrollbar">
               {["S", "M", "L", "XL", "XXL"].map((size) => (
@@ -156,9 +162,7 @@ const SingleHoodies = () => {
               Add to Cart
             </button>
 
-            <button className="hover:scale-110 bg-black hover:bg-black/80 text-white font-bold text-lg p-2 rounded-lg w-full">
-              Buy now
-            </button>
+            <BuyModels />
           </div>
           {/* button code end here */}
         </div>

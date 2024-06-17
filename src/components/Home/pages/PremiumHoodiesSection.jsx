@@ -1,52 +1,29 @@
 import { useNavigate } from "react-router-dom";
+import InfiniteScroller from "./InifiteScroller";
 
 const PremiumHoodiesSection = () => {
   const navigate = useNavigate();
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-2 w-full">
+      <div className="flex flex-col justify-center items-center">
         <div
-          className="relative w-full cursor-pointer"
+          className="flex w-full h-3/4 cursor-pointer mt-5"
           onClick={() => navigate("/shop")}
         >
           <img
-            src="/assets/page-2/DSC_7062.jpeg"
+            src="https://images.bewakoof.com/uploads/grid/app/thin-banner-desktop-sneakers-kakashi-1718372747.jpg"
             alt="DSC_7062.JPG"
-            className="w-full h-[33rem] object-cover"
+            className="w-full h-[15rem]"
           />
-
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent flex justify-center items-center">
-            <span className="text-white text-center text-4xl md:text-[8em] font-bold font-sans leading-[0.5em] sm:leading-[0em] tracking-tighter">
-              Premium Hoodies
-            </span>
-            {/* <img
-              src="/assets/page-2/Untitled-design.png"
-              alt="Untitled-design.png"
-              className="w-full"
-            /> */}
-          </div>
         </div>
 
-        <div
-          className="flex flex-col sm:flex-row gap-2 w-full h-full cursor-pointer"
-          onClick={() => navigate("/shop")}
-        >
-          <div className="w-full sm:w-1/2">
-            <img
-              src="/assets/page-2/page-2-left.jpeg"
-              alt="DSC_7062.JPG"
-              className="w-full h-[15rem]"
-            />
-          </div>
+        <div className="flex flex-col w-full">
+          <span className="text-black text-center my-4 text-2xl font-semibold">
+            Shop by Category- Men
+          </span>
 
-          <div className="w-full sm:w-1/2">
-            <img
-              src="/assets/page-2/page-2-right.jpeg"
-              alt="DSC_7062.JPG"
-              className="w-full h-[15rem] object-cover"
-            />
-          </div>
+          <InfiniteScroller />
         </div>
       </div>
     </>

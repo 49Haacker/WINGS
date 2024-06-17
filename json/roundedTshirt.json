@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "images": [
+      "/assets/page-1/product-4-1.jpeg",
+      "/assets/page-1/product-4-2.jpeg",
+      "/assets/page-1/product-4-3.jpeg",
+      "/assets/page-1/product-4-4.jpeg",
+      "/assets/page-1/product-4-5.jpeg",
+      "/assets/page-1/product-4-6.jpeg"
+    ],
+    "alt": "Honorable",
+    "product_head": "Round neck black tshirt",
+    "product_para": "Round neck black tshirt for men.",
+    "product_old_price": "999",
+    "product_new_price": "499"
+  },
+  {
+    "id": 2,
+    "images": [
+      "/assets/page-1/product-5-1.jpeg",
+      "/assets/page-1/product-5-2.jpeg",
+      "/assets/page-1/product-5-3.jpeg",
+      "/assets/page-1/product-5-4.jpeg",
+      "/assets/page-1/product-5-5.jpeg",
+      "/assets/page-1/product-4-6.jpeg"
+    ],
+    "alt": "Honorable",
+    "product_head": "Round neck grey tshirt",
+    "product_para": "Round neck grey tshirt for men.",
+    "product_old_price": "999",
+    "product_new_price": "499"
+  },
+  {
+    "id": 3,
+    "images": [
+      "/assets/page-1/product-6-1.jpeg",
+      "/assets/page-1/product-6-2.jpeg",
+      "/assets/page-1/product-6-3.jpeg",
+      "/assets/page-1/product-6-4.jpeg",
+      "/assets/page-1/product-6-5.jpeg",
+      "/assets/page-1/product-4-6.jpeg"
+    ],
+    "alt": "Honorable",
+    "product_head": "Olive Green Round Neck Tshirt",
+    "product_para": "Olive Green Round Neck Tshirt for men.",
+    "product_old_price": "999",
+    "product_new_price": "499"
+  },
+  {
+    "id": 4,
+    "images": [
+      "/assets/page-1/product-7-1.jpeg",
+      "/assets/page-1/product-7-2.jpeg",
+      "/assets/page-1/product-7-3.jpeg",
+      "/assets/page-1/product-7-4.jpeg",
+      "/assets/page-1/product-7-5.jpeg",
+      "/assets/page-1/product-4-6.jpeg"
+    ],
+    "alt": "Honorable",
+    "product_head": "White Round Neck Tshirt",
+    "product_para": "White Round Neck Tshirt.",
+    "product_old_price": "999",
+    "product_new_price": "499"
+  }
+]

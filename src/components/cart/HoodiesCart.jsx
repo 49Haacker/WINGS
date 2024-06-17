@@ -26,14 +26,16 @@ const HoodiesCart = () => {
           (item) => !prevData.some((prevItem) => prevItem.id === item.id)
         );
         const updatedData = [...prevData, ...newItems];
-        localStorage.setItem("storeCartData", JSON.stringify(updatedData));
         return updatedData;
       });
     }
   }, [cartItems]);
 
+  // Persist storeCartData to localStorage whenever storeCartData changes
   useEffect(() => {
-    localStorage.setItem("storeCartData", JSON.stringify(storeCartData));
+    if (storeCartData.length > 0) {
+      localStorage.setItem("storeCartData", JSON.stringify(storeCartData));
+    }
   }, [storeCartData]);
 
   const handleRemove = (id) => {
