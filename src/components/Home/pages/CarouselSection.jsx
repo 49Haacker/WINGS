@@ -42,7 +42,7 @@ const CarouselSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full bg-yellow-300">
+      <div className="flex flex-col items-center justify-center w-full">
         <div className="relative w-full mb-8">
           {/* Carousel wrapper */}
           <div className="relative w-full h-[35rem] overflow-hidden rounded-lg">

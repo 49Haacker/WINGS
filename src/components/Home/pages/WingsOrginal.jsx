@@ -2,46 +2,20 @@ import { useEffect, useState } from "react";
 
 const carouselItems = [
   {
-    url: "/assets/page-1/WINGS-Home-image-1.png",
-    alt: "wings-home-1",
+    url: "/assets/wings-orginal/wings-orginal-1.png",
+    alt: "wings-orginal-1",
   },
   {
-    url: "/assets/page-1/WINGS-Home-image-2.png",
-    alt: "wings-home-2",
-  },
-
-  {
-    url: "/assets/page-1/WINGS-Home-image-4.png",
-    alt: "wings-home-4",
+    url: "/assets/wings-orginal/wings-orginal-2.png",
+    alt: "wings-orginal-2",
   },
   {
-    url: "/assets/page-1/WINGS-Home-image-1.png",
-    alt: "wings-home-1",
+    url: "/assets/wings-orginal/wings-orginal-3.png",
+    alt: "wings-orginal-3",
   },
   {
-    url: "/assets/page-1/WINGS-Home-image-2.png",
-    alt: "wings-home-2",
-  },
-  {
-    url: "/assets/page-1/WINGS-Home-image-1.png",
-    alt: "wings-home-1",
-  },
-  {
-    url: "/assets/page-1/WINGS-Home-image-4.png",
-    alt: "wings-home-4",
-  },
-  {
-    url: "/assets/page-1/WINGS-Home-image-1.png",
-    alt: "wings-home-1",
-  },
-  {
-    url: "/assets/page-1/WINGS-Home-image-2.png",
-    alt: "wings-home-2",
-  },
-
-  {
-    url: "/assets/page-1/WINGS-Home-image-4.png",
-    alt: "wings-home-4",
+    url: "/assets/wings-orginal/wings-orginal-4.png",
+    alt: "wings-orginal-4",
   },
 ];
 

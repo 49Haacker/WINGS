@@ -3,13 +3,13 @@ import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "HOME", href: "/" },
-  { name: "POLO", href: "/polo" },
-  { name: "HOODIES", href: "/hoodies" },
-  { name: "ZIPPERS", href: "/zippers" },
+  { name: "Home", href: "/" },
+  { name: "Polo", href: "/polo" },
+  { name: "Hoodies", href: "/hoodies" },
+  { name: "Zippers", href: "/zippers" },
   { name: "Oversized", href: "/oversized" },
-  { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
-  { name: "CONTACT-US", href: "#" },
+  { name: "Round Neck TShirts", href: "/rounded-Tshirts" },
+  { name: "Contact-Us", href: "#" },
 ];
 
 const SideNavbar = ({ toggleSideNav }) => {

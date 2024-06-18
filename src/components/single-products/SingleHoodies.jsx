@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useHoodiesCart } from "../../hooks/HoodiesCartContext";
 import { v4 as uuidv4 } from "uuid";
 import HoodiesModels from "../models/Hoodies.models";
-import BuyModels from "../models/Buy.models";
+// import BuyModels from "../models/Buy.models";
 
 const SingleHoodies = () => {
   const [selectImage, setSelectImage] = useState();
@@ -43,6 +43,18 @@ const SingleHoodies = () => {
   };
 
   // console.log(hoodiesSingleData);
+
+  const redirectWhatsapp = () => {
+    // const currentUrl = window.location.href;
+    // const currentUrl = "Hi WINGS, please tell more about";
+    const productHead = hoodiesSingleData.product_head;
+    const productPrice = hoodiesSingleData.product_new_price;
+    const message = `Hi WINGS, please tell more about ${productHead} which is for just ${productPrice}!`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=6386897632&text=${encodeURIComponent(
+      message
+    )}&type=phone_number&app_absent=0`;
+    window.location.href = whatsappUrl;
+  };
 
   return (
     <>
@@ -102,7 +114,7 @@ const SingleHoodies = () => {
           {/* rating code start here */}
           <div className="flex flex-col px-7 pt-4">
             <h1 className="text-black/100 font-bold text-2xl">
-              Rate this Project
+              Rate this Product
             </h1>
 
             {/* rating */}
@@ -162,7 +174,17 @@ const SingleHoodies = () => {
               Add to Cart
             </button>
 
-            <BuyModels />
+            {/* <BuyModels /> */}
+            <button
+              className="hover:scale-110 bg-black hover:bg-black/80 text-white font-bold text-lg p-2 rounded-lg w-full"
+              onClick={redirectWhatsapp}
+            >
+              Checkout
+            </button>
+          </div>
+
+          <div className="text-center">
+            <h1>Please attach screen-shot of the product while checkout</h1>
           </div>
           {/* button code end here */}
         </div>

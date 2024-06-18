@@ -38,7 +38,7 @@ const RoundedNeckTshirts = () => {
             <img
               src={itmes.images[0]}
               alt={itmes.alt}
-              className="rounded-2xl h-[25rem] transform transition-transform delay-150 duration-150 ease-in-out hover:scale-105"
+              className="h-[25rem] transform transition-transform delay-150 duration-150 ease-in-out hover:scale-105"
             />
             {/* </div> */}
 

@@ -12,9 +12,9 @@ const PremiumHoodiesSection = () => {
           onClick={() => navigate("/shop")}
         >
           <img
-            src="https://images.bewakoof.com/uploads/grid/app/thin-banner-desktop-sneakers-kakashi-1718372747.jpg"
+            src="/assets/wings-orginal/wings-orginal-banners.png"
             alt="DSC_7062.JPG"
-            className="w-full h-[15rem]"
+            className="w-full sm:h-[15rem] object-cover sm:object-fill"
           />
         </div>
 

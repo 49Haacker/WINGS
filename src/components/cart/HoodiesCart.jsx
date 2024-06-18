@@ -46,11 +46,11 @@ const HoodiesCart = () => {
     toast("Removed from cart successfully!");
   };
 
-  const handleWishlist = () => {
-    console.log("Add to wishlist");
+  // const handleWishlist = () => {
+  //   console.log("Add to wishlist");
 
-    toast("Add to wishlist successfully!");
-  };
+  //   toast("Add to wishlist successfully!");
+  // };
 
   // const toggleDropdown = (id) => {
   //   setIsOpenDropdowns((prev) => ({
@@ -82,6 +82,26 @@ const HoodiesCart = () => {
   };
 
   // console.log(storeCartData);
+
+  const redirectWhatsapp = () => {
+    // const currentUrl = window.location.href;
+    const productDetails = storeCartData
+      .map((item) => {
+        return `*${item.product_head}*\nPrice: ${
+          item.product_new_price
+        }\nSize: ${item.selectedSize}\nDiscount: ${
+          calculateDiscount(item.product_old_price, item.product_new_price)
+            .discountPercentage
+        }% off`;
+      })
+      .join("\n\n");
+
+    const message = `Hi WINGS, please tell more about this product's:\n\n${productDetails}\n\nfrom my cart!`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=6386897632&text=${encodeURIComponent(
+      message
+    )}&type=phone_number&app_absent=0`;
+    window.location.href = whatsappUrl;
+  };
 
   return (
     <>
@@ -205,18 +225,18 @@ const HoodiesCart = () => {
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-2 w-full py-1 px-4">
                   <button
-                    className="hover:scale-110 bg-black hover:bg-black/80 rounded-lg text-lg font-semibold text-white w-full md:w-1/4 p-2"
+                    className="hover:scale-110 rounded-lg text-lg font-semibold text-black w-full p-2"
                     onClick={() => handleRemove(items.id)}
                   >
                     Remove
                   </button>
 
-                  <button
+                  {/* <button
                     className="hover:scale-110 bg-blue-700 hover:bg-blue-600 rounded-lg text-lg font-semibold text-white w-full md:w-3/4 p-2"
                     onClick={handleWishlist}
                   >
                     Move To Wishlist
-                  </button>
+                  </button> */}
                 </div>
               </div>
             );
@@ -224,9 +244,16 @@ const HoodiesCart = () => {
         </div>
 
         <div className="flex justify-center items-center w-full mt-14 mb-8">
-          <button className="hover:scale-110 bg-green-700 hover:bg-green-600 rounded-lg text-2xl font-bold text-white w-full sm:w-1/5 p-2">
-            Buy Now
+          <button
+            className="hover:scale-110 bg-green-700 hover:bg-green-600 rounded-lg text-2xl font-bold text-white w-full sm:w-1/5 p-2"
+            onClick={redirectWhatsapp}
+          >
+            Checkout
           </button>
+        </div>
+
+        <div className="text-center">
+          <h1>Please attach screen-shot of the product while checkout</h1>
         </div>
       </div>
     </>

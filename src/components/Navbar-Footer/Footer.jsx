@@ -2,39 +2,16 @@ import PropTypes from "prop-types";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMarkEmailUnread, MdOutlinePhone } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const footerHeading = [
   {
     name: "POPULAR CATEGORIES",
     product1: "Polo Tshirts",
-    product2: "Track Suits",
-    product3: "Bottom",
-    product4: "Sweatshirts",
-    product5: "Hoodies and Zipppers",
-  },
-  {
-    name: "WE OFFERS",
-    product1: "Prices Drop",
-    product2: "New Products",
-    product3: "Best Sales",
-    product4: "contact Us",
-    product5: "Sitemap",
-  },
-  {
-    name: "WINGS HIGHLIGHT",
-    product1: "Delivery",
-    product2: "Legal Notice",
-    product3: "Terms Ans Conditions",
-    product4: "About us",
-    product5: "Secure Payment",
-  },
-  {
-    name: "SERVICES",
-    product1: "Price Drop",
-    product2: "New Products",
-    product3: "Best Sales",
-    product4: "Contact Us",
-    product5: "Sitemap",
+    product2: "Hoodies",
+    product3: "Zipppers",
+    product4: "Oversized",
+    product5: "Round Neck TShirts",
   },
 
   {
@@ -49,6 +26,8 @@ const footerHeading = [
 ];
 
 const Footer = React.forwardRef((props, ref) => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* <div ref={ref} className="relative w-full">
@@ -86,25 +65,62 @@ const Footer = React.forwardRef((props, ref) => {
                   {items.locationIcon && (
                     <span className="text-2xl">{items.locationIcon}</span>
                   )}
-                  <h4>{items.product1}</h4>
+                  {items.locationIcon ? (
+                    <h4>{items.product1}</h4>
+                  ) : (
+                    <h4
+                      className="cursor-pointer"
+                      onClick={() => navigate("/polo")}
+                    >
+                      {items.product1}
+                    </h4>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
                   {items.phoneIcon && (
                     <span className="text-2xl">{items.phoneIcon}</span>
                   )}
-                  <h4>{items.product2}</h4>
+                  {items.locationIcon ? (
+                    <h4>{items.product2}</h4>
+                  ) : (
+                    <h4
+                      className="cursor-pointer"
+                      onClick={() => navigate("/hoodies")}
+                    >
+                      {items.product2}
+                    </h4>
+                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
                   {items.mailIcon && (
                     <span className="text-2xl">{items.mailIcon}</span>
                   )}
-                  <h4>{items.product3}</h4>
+                  {items.locationIcon ? (
+                    <h4>{items.product3}</h4>
+                  ) : (
+                    <h4
+                      className="cursor-pointer"
+                      onClick={() => navigate("/zippers")}
+                    >
+                      {items.product3}
+                    </h4>
+                  )}
                 </div>
 
-                <h4>{items.product4}</h4>
-                <h4>{items.product5}</h4>
+                <h4
+                  className="cursor-pointer"
+                  onClick={() => navigate("/oversized")}
+                >
+                  {items.product4}
+                </h4>
+                <h4
+                  className="cursor-pointer"
+                  onClick={() => navigate("/rounded-Tshirts")}
+                >
+                  {items.product5}
+                </h4>
               </div>
             </div>
           ))}

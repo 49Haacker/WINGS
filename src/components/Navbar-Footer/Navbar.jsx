@@ -3,13 +3,13 @@ import { TiShoppingCart } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
-  { name: "HOME", href: "/" },
-  { name: "POLO", href: "/polo" },
-  { name: "HOODIES", href: "/hoodies" },
-  { name: "ZIPPERS", href: "/zippers" },
+  { name: "Home", href: "/" },
+  { name: "Polo", href: "/polo" },
+  { name: "Hoodies", href: "/hoodies" },
+  { name: "Zippers", href: "/zippers" },
   { name: "Oversized", href: "/oversized" },
-  { name: "ROUND NECK T-SHIRTS", href: "/rounded-Tshirts" },
-  { name: "CONTACT-US", href: "#" },
+  { name: "Round Neck TShirts", href: "/rounded-Tshirts" },
+  { name: "Contact-Us", href: "#" },
 ];
 
 const Navbar = ({ footerRef }) => {
@@ -36,7 +36,7 @@ const Navbar = ({ footerRef }) => {
               onClick={
                 items.name === "CONTACT-US" ? handleContactUsClick : null
               }
-              className={`text-lg font-semibold px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
+              className={`text-base font-semibold px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
                 location.pathname === items.href
                   ? "text-gray-500/100"
                   : "text-black"
