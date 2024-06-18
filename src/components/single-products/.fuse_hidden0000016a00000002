@@ -53,7 +53,6 @@ const SingleHoodies = () => {
     const whatsappUrl = `https://api.whatsapp.com/send?phone=6386897632&text=${encodeURIComponent(
       message
     )}&type=phone_number&app_absent=0`;
-
     window.location.href = whatsappUrl;
   };
 
