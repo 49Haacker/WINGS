@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMarkEmailUnread, MdOutlinePhone } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const footerHeading = [
   {
@@ -133,7 +133,9 @@ const Footer = React.forwardRef((props, ref) => {
 
           <p className="text-base text-gray-500/90">
             Design And Manage By{" "}
-            <span className="text-green-500">HelloTech Solutions</span>
+            <Link to={"https://www.hallotech.in"} className="text-green-500">
+              HelloTech Solutions
+            </Link>
           </p>
         </div>
       </div>
