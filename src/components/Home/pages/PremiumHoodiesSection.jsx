@@ -1,15 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import InfiniteScroller from "./InifiteScroller";
 
 const PremiumHoodiesSection = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="flex flex-col justify-center items-center">
         <div
-          className="flex w-full h-3/4 cursor-pointer mt-5"
-          onClick={() => navigate("/shop")}
+          className="flex w-full h-3/4 mt-5"
+          // onClick={() => navigate("/shop")}
         >
           <img
             src="/assets/wings-orginal/wings-orginal-banners.png"
