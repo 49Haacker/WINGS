@@ -34,7 +34,7 @@ const Navbar = ({ footerRef }) => {
               key={index}
               to={items.href}
               onClick={
-                items.name === "CONTACT-US" ? handleContactUsClick : null
+                items.name === "Contact-Us" ? handleContactUsClick : null
               }
               className={`text-base font-semibold px-2 rounded-md hover:animate-pulse transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ${
                 location.pathname === items.href
